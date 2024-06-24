@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+    user-select: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --Active-shade-BG: linear-gradient(0deg, rgba(0, 178, 255, 0.20) 0%, rgba(0, 178, 255, 0.20) 100%), rgba(0, 0, 0, 0.50);
+    --Warn-shade-BG: linear-gradient(0deg, rgba(255, 229, 0, 0.20) 0%, rgba(255, 229, 0, 0.20) 100%), rgba(0, 0, 0, 0.50);
+    --Error-shade-BG: linear-gradient(0deg, rgba(255, 0, 0, 0.20) 0%, rgba(255, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.50);
+    --Key: #00B2FF;
+    --Stroke-color-HUD: #0A1012;
+}
+
+.menu {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 4.44vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.48vh;
+    padding: 2.22vh 0.83vw;
+    border-radius: 0.74vh;
+    background: rgba(0, 0, 0, 0.55);
+    min-width: 12.05vw;
+    max-width: 23vw;
+}
+
+.menu .head {
+    text-align: center;
+    font-size: 2.22vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #FFF 15.08%, #C9C9C9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.57vh;
+    min-width: 12.05vw;
+    max-width: 23vw;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.menu .menu-items .menu-item {
+    position: relative;
+    font-size: 1.48vh;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap: 1.5vh;
+    align-items: center;
+    align-self: stretch;
+    text-align: center;
+    width: 100%;
+    padding: 0.56vh 0.63vw;
+    border-radius: 0.37vh;
+}
+
+.menu .menu-items .menu-item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.09vh;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1vh;
+    bottom: -0.83vh;
+}
+
+.menu .menu-items .menu-item.selected {
+    border: 0.09vh solid var(--Key, #00B2FF);
+    background: rgba(0, 178, 255, 0.15);
+    color: var(--Key, #00B2FF);
+    font-size: 1.48vh;
+    font-weight: 700;
+}
+
